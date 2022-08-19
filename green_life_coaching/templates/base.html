@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Green Life Coaching</title>
   <link rel="stylesheet" href="{% static 'green_life_coaching/style.css' %}">
+  <script src="{% static 'js/app.js' %}"></script>
   <script src="https://kit.fontawesome.com/d592f389ba.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,12 +16,14 @@
     <img src="{% static 'green_life_coaching/Green Life.png' %}" alt="">
     <nav>
       <i class="fa-solid fa-bars"></i>
-      <a href="#">nav1</a>
-      <a href="#">nav2</a>
-      <a href="#">nav3</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'blogs' %}">Blog</a>
+      <a href="#">Products</a>
     </nav>
   </header>
-
+  {% block content%}
+  {% endblock content %}
+  <footer>Created By<a href="https://www.linkedin.com/in/brendon-hampton-37132899/">Brendon</a>@2022</footer>
 </body>
 
 </html>
